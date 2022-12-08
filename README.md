@@ -1,53 +1,75 @@
-# Recipe App
-> The Recipe app keeps track of all your recipes, ingredients, and inventory. It will allow you to save ingredients, keep track of what you have, create recipes, and generate a shopping list based on what you have and what you are missing from a recipe. Also, since sharing recipes is an important part of cooking the app should allow you to make them public so anyone can access them.
+# ![](https://img.shields.io/badge/Microverse-blueviolet) Blog-App
+> ** This is a recipe App
+
+## Built With
+
+- Ruby on Rails
+- Ruby
+
+## Prerequisites
+
+- Ruby
+- Ruby on Rails
+- PostgreSQL
+
+## Install
+
+- Ruby
+- Ruby on Rails(as a gem)
+- Postgresql database
 
 ## Getting Started
-To get a local copy up and running follow these simple example steps.
 
-- Copy this link `https://github.com/jasonfelice/Recipe-Rails`.
-- Get the directory that you want to clone the repository.
-- Open the command prompt in this directory.
-- Write `https://github.com/jasonfelice/Recipe-Rails`.
-- Go to the repository folder in your command prompt `cd recipe-rails`.
-- Run `rails s` or `rails server` to start.
-- Run `Rspec spec` to run tests.
+To get a local copy of the app, run the following commands in your terminal:
+- `git clone https://github.com/medsonmoombe/Recipe_App.git`
+- `cd /Recipe_App.git`
+- `bundle install`
+
+Run the following commands to run the app
+
+- `rails db:create`
+- `rails db:migrate`
+- `rails s`
+
+In your browser, go to
+
+- `http://localhost:3000`
+
+## Testing
+- To install rspec: gem install rspec
+- To run all the tests: rspec ./spec
+
 
 ## Authors
 
-👤 **Jake Felice**
+👤   **Emmanuel Moombe**
 
-- GitHub: [@jasonfelice](https://github.com/jasonfelice)
-- Twitter: [@jasonfelice0](https://twitter.com/jasonfelice0)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/jason-felice-11a5a622b/)
+- GitHub: https://github.com/medsonmoombe
+- Twitter: https://twitter.com/@emmanue78388405
+- LinkedIn: https://www.linkedin.com/in/emmanuel-moombe-821918230/
 
-👤 **Kanombola**
+ 👤 **Ibrahim Ahmat**
+- GitHub: [@ibr5500](https://github.com/ibr5500)
+- Twitter: [@ibr_ahmat](https://twitter.com/ibr_ahmat)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/ibrahim-ahmat/)
 
-- GitHub: [@kanorox](https://github.com/kanorox)
-- Twitter: [Twitter](https://twitter.com/)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/)
 
-👤 **Manel Hammouche**
+ 👤 **Stanley SIMEON**
+- GitHub: [@stanleySimeon](https://github.com/stanleySimeon)
+- Twitter: [@mstanleyme](https://twitter.com/mstanleyme)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/stanleysimeon/)
 
-- GitHub: [@ha-manel](https://github.com/ha-manel)
-- Twitter: [@hamanel](https://twitter.com/ha_manel_)
-- LinkedIn: [Manel Hammouche](https://www.linkedin.com/in/manel-hammouche/)
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/aimalamiri/Ruby-Catalog/issues).
 
 ## Show your support
 
 Give a ⭐️ if you like this project!
 
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
-
 ## 📝 License
 
-This project is [MIT](./MIT.md) licensed.
+This project is [MIT](./LICENSE) licensed
