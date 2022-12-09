@@ -48,6 +48,10 @@ thead, .btn1 {
         text-align: center;
     }
 
+    .card {
+        width: 80% !important;
+    }
+
     .button_to {
         display: flex;
         justify-content: center;
