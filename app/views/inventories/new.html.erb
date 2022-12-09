@@ -1,14 +1,15 @@
-<div class="container-fluid w-50 d-flex flex-column align-items-center">
+<%= stylesheet_link_tag('screens') %>
+<div class="container-fluid w-80 d-flex flex-column align-items-center">
   <h1>Create a new inventory:</h1>
-  <%= form_with model: @inventory, url: inventories_path, method: :post, :html => {:class => "w-50 mt-4"} do |form| %>
+  <%= form_with model: @inventory, url: inventories_path, method: :post, :html => {:class => "food-form mt-4"} do |form| %>
     <div class="mb-3 w-100">
       <%= form.label :name, 'Name', class: "form-label" %>
-      <%= form.text_field :name, class:"form-control" %>
+      <%= form.text_field :name, class:"form-control", required: true %>
     </div>
     <div class="mb-3 w-100">
       <%= form.label :description, 'Description', class: "form-label" %>
-      <%= form.text_area :description, class:"form-control" %>
+      <%= form.text_area :description, class:"form-control", required: true %>
     </div>
-    <%= form.submit 'Create inventory', class: "btn btn-primary" %>
+    <%= form.submit 'Create inventory', class: "btn btn1" %>
   <% end %>
 </div>

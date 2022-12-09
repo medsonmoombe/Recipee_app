@@ -1,3 +1,4 @@
+<%= stylesheet_link_tag('screens') %>
 <section class="container">
   <h1 class="text-center mb-5"><%= @recipe.name %></h1>
 <span class="badge badge-primary">Private</span>
@@ -12,14 +13,14 @@
     </div>
     <div class="recipe-stat">
       <% if @recipe.public %>
-        <span class="btn btn-warning">Public</span>
+        <span class="btn btn1">Public</span>
       <% else %>
         <span class="btn btn-primary">Private</span>
       <% end %>
     </div>
   </div>
   <div class="mt-5 d-flex justify-content-around">
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#recipeModal">
+    <button type="button" class="btn bg-transparent text-primary text-decoration-underline border-0" data-bs-toggle="modal" data-bs-target="#recipeModal">
       Generate shopping list
     </button>
 
@@ -37,14 +38,14 @@
               <%= form.select :inventory_id, current_user.inventories.order(:name).pluck(:name, :id), {}, class: "form-select form-select-lg mt-3" %>
             </div>
             <div class="modal-footer">
-              <%= form.submit 'Generate', class: "btn btn-primary" %>
+              <%= form.submit 'Generate', class: "btn btn1" %>
             </div>
           <% end %>
         </div>
       </div>
     </div>
     <% if can? :update, @recipe %>
-      <%= link_to "Add ingredient", new_user_recipe_recipe_food_path(@recipe.user, @recipe), class: "btn btn-danger" %>
+      <%= link_to "Add ingredient", new_user_recipe_recipe_food_path(@recipe.user, @recipe), class: "btn bg-transparent text-primary text-decoration-underline border-0" %>
     <% end %>
   </div>
 
@@ -65,8 +66,8 @@
       <td>$ <%= ingredient.quantity* ingredient.food.price %></td>
       <td>
         <div class="d-flex justify-content-center gap-3">
-          <%= button_to "Delete", user_recipe_recipe_food_path(@recipe.user, @recipe.id, ingredient.id), method: :delete, class: "btn btn-danger" %>
-          <%= link_to "Edit", edit_user_recipe_recipe_food_path(@recipe.user, @recipe, ingredient), class: "btn btn-primary" %>
+          <%= button_to "Delete", user_recipe_recipe_food_path(@recipe.user, @recipe.id, ingredient.id), method: :delete, class: "btn bg-transparent text-danger text-decoration-underline border-0" %>
+          <%= link_to "Edit", edit_user_recipe_recipe_food_path(@recipe.user, @recipe, ingredient), class: "btn bg-transparent text-primary text-decoration-underline border-0" %>
         </div>
       </td>
     </tr>

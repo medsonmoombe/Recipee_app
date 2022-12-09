@@ -1,22 +1,23 @@
-<div class="container-fluid w-50 d-flex flex-column align-items-center">
-<%= form_with model: @food, :html => {:class => "w-50 mt-4"} do |form| %>
+<%= stylesheet_link_tag('screens') %>
+<div class="container-fluid w-80 d-flex flex-column align-items-center">
+<%= form_with model: @food, :html => {:class => "w-80 mt-4 food-form"} do |form| %>
   <div>
     <%= form.label :name, class: "form-label" %><br>
-    <%= form.text_field :name,  class:"form-control" %>
+    <%= form.text_field :name,  class:"form-control", required: true  %>
   </div>
 
   <div>
     <%= form.label :measurement_unit, class:"form-label" %><br>
-    <%= form.text_field :measurement_unit, class:"form-control" %>
+    <%= form.text_field :measurement_unit, class:"form-control", required: true  %>
   </div>
 <div>
     <%= form.label :price , class:"form-label"%><br>
-    <%= form.number_field :price ,  class:"form-control"%>
+    <%= form.number_field :price ,  class:"form-control", required: true %>
   </div>
 
 
   <div>
-    <%= form.submit 'Create food', class: "btn btn-primary my-3"  %>
+    <%= form.submit 'Create food', class: "btn btn-success my-3"  %>
   </div>
 <% end %>
 

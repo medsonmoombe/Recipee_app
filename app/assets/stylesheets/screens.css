@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+.d-flex {
+    font-family: 'Roboto', sans-serif;
+}
+.card-recipe {
+    background: rgba(238, 229, 229, 0.966);
+}
+
+/* food section */
+.navG {
+    background: rgb(33, 161, 54) !important;
+}
+
+thead, .btn1 {
+    background: rgb(33, 161, 54) ;
+    color: #fff;
+    border: 0;
+}
+
+.tabl {
+    width: 80% !important;
+    margin-top: 2rem !important;
+}
+
+/* food new */
+.food-form {
+    width: 80% !important;
+}
+
+/* recipe show */
+.recipe-info {
+    background: rgba(238, 229, 229, 0.966);
+    padding: 1rem 0  1rem;
+}
+
+/* inventories */
+.inventories-card {
+    width: 80% !important;
+}
+
+@media (max-width:768px) {
+    .card-recipe {
+
+    }
+
+    .card-body {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .button_to {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* food section */
+
+    .th {
+        font-size: 12px;
+    }
+}

@@ -1,12 +1,11 @@
+<%= stylesheet_link_tag('screens') %>
 <section class="d-flex flex-column align-items-center">
   <h1 class="text-center mb-5">Recipes</h1>
 
-  <div class="d-flex flex-column">
-    <%= link_to "Add New Recipe", new_user_recipe_path, class: "btn btn-primary mb-2" %>
-
-
+  <%= link_to "Add New Recipe", new_user_recipe_path, class: "btn btn1 mb-2 w-20" %>
+  <div class="d-flex flex-column w-100">
     <% if @recipes.empty? %>
-      <h2 class="text-center">The list is empty.</h2>
+      <h2 class="text-center text-danger fs-5">The list is empty.</h2>
     <% else %>
       <% @recipes.each do |recipe| %>
       <%= render partial: 'recipes/card', locals: { recipe: recipe }  %>

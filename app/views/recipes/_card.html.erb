@@ -1,8 +1,9 @@
-<div class="card mb-3" style="width: 50rem;">
-  <div class="card-body d-flex space-between">
+<%= stylesheet_link_tag('screens') %>
+<div class="card mb-3 card-recipe" style="width: 80%; margin: auto;">
+  <div class="card-body d-flex space-between w-100">
     <div class="card-body d-flex flex-column">
       <h5 class="card-title">
-        <%= link_to recipe.name, user_recipe_path(id: recipe.id, user_id: recipe.user.id) %>
+        <%= link_to recipe.name, user_recipe_path(id: recipe.id, user_id: recipe.user.id), class: "text-decoration-none text-success" %>
       </h5>
       <h6 class="card-subtitle mb-2 text-muted"><%= recipe.user.name %></h6>
       <p class="mt-4"><%= recipe.description %></p>
@@ -20,6 +21,6 @@
     </div>
   </div>
   <% if can? :manage, recipe %>
-    <%= button_to "Delete", user_recipe_path(recipe.user, recipe.id), method: :delete, class: "btn btn-danger m-3 ms-4" %>
+    <%= button_to "Delete", user_recipe_path(recipe.user, recipe.id), method: :delete, class: "btn btn-danger m-3 ms-4 delete-btn" %>
   <% end %>
 </div>
