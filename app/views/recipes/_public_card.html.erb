@@ -1,8 +1,8 @@
-<div class="card mb-3" style="width: 50rem;">
+<div class="card mb-3 card-recipe" style="width: 50rem;">
   <div class="card-body d-flex space-between">
     <div class="card-body d-flex flex-column">
       <h5 class="card-title">
-        <%= link_to recipe.name, user_recipe_path(id: recipe.id, user_id: recipe.user.id) %>
+        <%= link_to recipe.name, user_recipe_path(id: recipe.id, user_id: recipe.user.id), class: "Rname" %>
       </h5>
       <h6 class="card-subtitle mb-2 text-muted"><%= recipe.user.name %></h6>
       <p class="mt-4"><%= recipe.description %></p>

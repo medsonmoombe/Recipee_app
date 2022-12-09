@@ -1,14 +1,15 @@
+<%= stylesheet_link_tag('screens') %>
 <div class="container-fluid w-50 d-flex flex-column align-items-center mt-5">
-  <h2>Log in</h2>
-  <%= form_for(resource, as: resource_name, url: session_path(resource_name), :html => {:class => "w-50 mt-4"} ) do |f| %>
+  <h2 text-center>Log in</h2>
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name), :html => {:class => "w-100 mt-4"} ) do |f| %>
     <div class="field mt-3">
       <%= f.label :email ,class:"form-label"%><br />
-      <%= f.email_field :email, autofocus: true, autocomplete: "email",class:"form-control" %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email",class:"form-control", required: true %>
     </div>
 
     <div class="field mt-3">
       <%= f.label :password , class:"form-label"%><br />
-      <%= f.password_field :password, autocomplete: "current-password",class:"form-control" %>
+      <%= f.password_field :password, autocomplete: "current-password",class:"form-control", required: true %>
     </div>
 
     <% if devise_mapping.rememberable? %>
@@ -19,7 +20,7 @@
     <% end %>
 
     <div class="actions">
-      <%= f.submit "Log in", class:"btn btn-primary mt-3" %>
+      <%= f.submit "Log in", class:"btn btn1 mt-3" %>
     </div>
   <% end %>
 

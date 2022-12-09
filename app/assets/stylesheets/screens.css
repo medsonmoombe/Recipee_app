@@ -6,6 +6,11 @@
     background: rgba(238, 229, 229, 0.966);
 }
 
+.Rname {
+    text-decoration: none;
+    color:  rgb(33, 161, 54) !important;
+}
+
 /* food section */
 .navG {
     background: rgb(33, 161, 54) !important;
